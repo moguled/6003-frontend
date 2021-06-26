@@ -1,7 +1,5 @@
 body {
   background-color: #d3d3d3;
-  width: 100%; 
-  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -232,14 +230,15 @@ code {
 /*********************************************/
 /* Home Page section */
 
-
+.objectheader{
+  font-size: 30px;
+}
 
 .license-container{
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  
+  justify-content: center;
   margin: auto;
 }
 
@@ -249,13 +248,16 @@ code {
   height: 20%;
   background: lightblue;
   border: 3px solid black;
-  padding: 15px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
   margin-top: 20px;
   position: relative;
   cursor: pointer;
 }
 
-.statustext{
+.statustext {
   text-align: left;
 }
 
@@ -264,13 +266,46 @@ code {
 }
 
 .username{
-  text-align: right;
+  text-align: left;
+  padding-bottom: 20px;
 }
 
 .license-header{
   margin: 60px;
-  
+  color: black; 
+  font-size: 48px; 
+  font-family: 'Signika', sans-serif; 
+  padding-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
 }
+
+
+.changeButton{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: purple;
+  background-color: white; 
+  border-color: purple;
+  border-radius: 15px;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.changeButton:hover {
+  background-color: #4CAF50;
+  border-radius: 15px;
+  border-color: white;
+  color: white;
+  background-color: purple; 
+}
+
+
+
 
 
 

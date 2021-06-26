@@ -11,6 +11,9 @@ export default function SignIn({loggedIn}){
   const[err,setErr] = useState('')
   
   
+  
+  
+  
   const OnChangeInput = e => {
     const {name, value} = e.target;
     setUser({...user, [name]:value})
@@ -29,6 +32,15 @@ export default function SignIn({loggedIn}){
       //console.log(res.data.jwttoken)            
       setUser({email: '', password: '', name: ''})
       localStorage.setItem('jwt', res.data.jwttoken);
+      // window.$userrole = res.data.role;
+      
+      if (res.data.role == "admin"){
+        
+         localStorage.setItem('r', "01234");
+        
+      }
+      
+      
       loggedIn(true)
     }catch(err){
       err.response.data.errmsg && setErr(err.response.data.errmsg)
