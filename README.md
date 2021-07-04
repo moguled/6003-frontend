@@ -1,5 +1,5 @@
 # 6003-frontend
-
+# MERN Stack: MONGODB, EXPRESS, REACT, NODE.JS.
 # Welcome to my 6003CEM- Front End API Deferrel Project
 
 This is the front-end section of my Trading Licenses Application.
@@ -47,3 +47,9 @@ Tutorials used:
 - https://www.youtube.com/playlist?list=PLJM1tXwlGdaf57oUx0rIqSW668Rpo_7oU
 - https://www.youtube.com/playlist?list=PLillGF-RfqbbiTGgA77tGO426V3hRF9iE
 - https://www.youtube.com/playlist?list=PLs4co9a6NhMzi2DQS_I4rqmNZdq-jSpsa 
+
+# Commands:
+
+# npm start
+
+- This starts the frontend server.
