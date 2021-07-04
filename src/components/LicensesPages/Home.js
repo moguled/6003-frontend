@@ -8,7 +8,7 @@ export default function Home() {
 
  
   
-  
+  //post request to the back-end to get license documents
   const getLicenses = async (currenttoken) =>{
         const res = await axios.get('/api/licenses', {
             headers:{Authorisation: currenttoken}
@@ -18,6 +18,7 @@ export default function Home() {
   
   //this.setState(licenses);
   
+  //unused search function
   const SearchBox = ({placeholder,handleChange}) =>{
   
    return(
@@ -40,7 +41,7 @@ export default function Home() {
 
   
 
-  
+   //will only display buttons if user is admin. also admin is validated on back for the update route.
    const addbutton= (licenseID) => {
      if (localStorage.getItem('r') == "01234"){
        
@@ -53,7 +54,7 @@ export default function Home() {
      }
    }
      
-    
+    //response to each button click when updating status
    const buttonaction = async (e) =>{
      
      let newstatus = "";
@@ -62,21 +63,21 @@ export default function Home() {
        case "approve":
          newstatus = "accepted"
          alert("This license application has been approved")
-         window.location.reload();
+         window.location.reload(true);
          break;
        case "reject":
          newstatus = "rejected"
          alert("This license application has been rejected")
-         window.location.reload();
+         window.location.reload(true);
          break;
        case  "suspend":
          newstatus = "pending"
          alert("This license application has been set to pending")
-         window.location.reload();
+         window.location.reload(true);
          break;     
          
      }
-    
+       //posting new status update to the database via update route.
        try{
             const license_id = e.target.value;           
             const currenttoken = localStorage.getItem('jwt')            
@@ -108,6 +109,7 @@ export default function Home() {
             <div className="object">
                 <h3 className="objectheader"> {license.companyname} </h3>
                 <div className="details"> <p> Details: {license.details} </p></div>
+                <div className="address"> <p> Company Address: {license.address} </p></div>
                 <div className="bottomrow"> 
                   <p className="statustext"> Status: {license.status} </p> 
                   <p className="username"> Name : {license.name} </p> 

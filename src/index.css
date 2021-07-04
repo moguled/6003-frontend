@@ -283,25 +283,25 @@ code {
 
 
 .changeButton{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: purple;
-  background-color: white; 
-  border-color: purple;
-  border-radius: 15px;
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
+  color: #fff ;
+	text-transform: uppercase;
+	background: darkgray;
+	padding: 20px 30px;
+	border-radius: 5px;
+  margin: 20px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
 }
 
 
 .changeButton:hover {
-  background-color: #4CAF50;
-  border-radius: 15px;
-  border-color: white;
-  color: white;
-  background-color: purple; 
+  background: purple;
+	letter-spacing: 1px;
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
 }
 
 

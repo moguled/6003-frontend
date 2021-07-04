@@ -28,12 +28,10 @@ export default function SignIn({loggedIn}){
         email: user.email,
         password: user.password
       })
-      console.log(res.data.email)
-      //console.log(res.data.jwttoken)            
+      console.log(res.data.email)           
       setUser({email: '', password: '', name: ''})
       localStorage.setItem('jwt', res.data.jwttoken);
-      // window.$userrole = res.data.role;
-      
+
       if (res.data.role == "admin"){
         
          localStorage.setItem('r', "01234");

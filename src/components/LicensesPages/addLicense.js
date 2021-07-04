@@ -5,6 +5,7 @@ export default function CreateLicense() {
   const [license, setLicense] = useState({
     companyname: '',
     companytype: '',
+    address: '',
     details: ''
   })
   const[err,setErr] = useState('');
@@ -24,8 +25,8 @@ export default function CreateLicense() {
     try{
       const currenttoken = localStorage.getItem('jwt') //takes jwttoken from localstorage
       if(currenttoken){
-        const {companyname, companytype, details} = license;
-        const newLicense = {companyname, companytype, details}
+        const {companyname, companytype, address, details} = license;
+        const newLicense = {companyname, companytype, address, details}
         const res = await axios.post('/api/licenses', newLicense,{
           headers: {Authorisation: currenttoken}
         })
@@ -50,6 +51,8 @@ export default function CreateLicense() {
             <input type="text" name="companyname" id="companyname" className = "application-input"  placeholder="Enter company name here..." value={license.companyname} required onChange={OnChangeInput} ></input>
           <h2> Company Type </h2>
             <input type="text" name="companytype" className = "application-input" id="companytype" placeholder="Company Focus?" value={license.companytype} required onChange={OnChangeInput} ></input>
+          <h2> Address </h2>
+            <input type="text" name="address" id="address" className = "application-input"  placeholder="Enter address here..." value={license.address} required onChange={OnChangeInput} ></input>
           <h2> Application Details </h2>
             <textarea type="text" name="details" maxLength="200" rows="10"  className = "application-textarea"  id="details" placeholder="Enter further details..." value={license.details} required onChange={OnChangeInput}  ></textarea >
           <div> <button className = "licensebutton" type="submit"> SUBMIT  </button> </div> 
