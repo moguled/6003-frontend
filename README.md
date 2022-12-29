@@ -1,6 +1,6 @@
 # 6003-frontend
 # MERN Stack: MONGODB, EXPRESS, REACT, NODE.JS.
-# Welcome to my 6003CEM- Front End API Deferrel Project
+# Welcome to my 6003CEM- Front End API Project
 
 This is the front-end section of my Trading Licenses Application.
 
